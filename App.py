@@ -90,7 +90,7 @@ class App():
         inbox_Email = Entry(inbox_frame, font=("Arial", "10", "normal"), width=30)
         inbox_Email.grid(row=1, column=2)
 
-        # --------------- BUTTON WIDGETS ZONE -----------------
+      
         Add_contact_button = Button(button_frame, command=lambda: add(), text='Añadir contacto', width=20)
         Add_contact_button.configure(bg="#FFFFFF", cursor='hand2', font=("Arial", "10", "normal"))
         Add_contact_button.grid(row=0, column=0, padx=2, pady=3, sticky=W + E)
@@ -115,7 +115,7 @@ class App():
         save_changes_button.configure(bg="#FFFFFF", cursor='hand2', font=("Arial", "10", "normal"))
         save_changes_button.grid(row=1, column=2, padx=2, pady=3, sticky=W + E)
 
-        # -------------- COMBOBOX WIDGETS ZONE ----------------
+       
         Label(button_frame, text='Buscar/Modificar', bg="#FFFFFF", font=("Arial", "10", "normal")).grid(
             row=0, column=3, columnspan=3)
 
@@ -125,15 +125,14 @@ class App():
         combo.grid(row=1, column=3, padx=15)
         combo.current(0)
 
-        # --------------- TREE DIRECTORY ZONE -----------------
-        # Table for database
+        
         self.tree = ttk.Treeview(three_frame, height=20, columns=("uno", "dos"))
         self.tree.grid(padx=5, pady=5, row=0, column=0, columnspan=1)
         self.tree.heading("#0", text='Nombre', anchor=CENTER)
         self.tree.heading("uno", text='Numero', anchor=CENTER)
         self.tree.heading("dos", text='Email', anchor=CENTER)
 
-        # Scroll
+    
         scrollVert = Scrollbar(three_frame, command=self.tree.yview)
         self.tree.configure(yscrollcommand=scrollVert.set)
         scrollVert.grid(row=0, column=1, sticky="nsew")
@@ -361,7 +360,7 @@ class TopLevelModify():
         cancel_button.configure(bg="#FFFFFF", cursor='hand2', font=("Arial", "10", "normal"))
         cancel_button.grid(row=1, column=2, padx=2, pady=3, sticky=W + E)
 
-        # ----------------- BUTTON FUNCTIONS ------------------
+     
         def yes():
             contact = self.val_modify
             new_name = n_inbox_name.get()
