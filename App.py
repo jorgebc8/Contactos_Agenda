@@ -76,7 +76,7 @@ class App():
         three_button_frame = LabelFrame(self.window, bg="#FFFFFF")
         three_button_frame.grid(row=4, column=4)
 
-        # --------------- INBOX WIDGETS ZONE ------------------
+      
         Label(inbox_frame, text='Nombre', bg="#FFFFFF", font=("Arial", "20", "normal")).grid(row=2, column=2)
         inbox_name = Entry(inbox_frame, font=("Arial", "10", "normal"), width=30)
         inbox_name.grid(row=1, column=0)
